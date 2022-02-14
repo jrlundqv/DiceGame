@@ -1,0 +1,8 @@
+TODO Benytte user input for å bestemme antall spiller/computer opponents
+
+**** COMPLETED ****
+Sortere leaderboarden etter poengsum
+Printe to terninger ved siden av hverandre
+Gjøre det mulig å rulle x antall terninger
+Gjøre det mulig å være x antall spillere
+Gjøre det mulig å spille mot computern
