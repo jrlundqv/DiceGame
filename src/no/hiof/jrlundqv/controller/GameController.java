@@ -84,12 +84,12 @@ public class GameController {
                 break;
             }
         }
-        if (successfulRoll) for (Dice dice : diceManager.getDiceList()) {
-            currentPlayer.addRollScore(dice.getDiceRoll());
-            rollScore += dice.getDiceRoll();
-        }
 
         if (successfulRoll) {
+            for (Dice dice : diceManager.getDiceList()) {
+                currentPlayer.addRollScore(dice.getDiceRoll());
+                rollScore += dice.getDiceRoll();
+            }
             checkWinCondition();
             System.out.println(currentPlayer.getPlayerName() + ", you rolled " + rollScore + ", your round score is now " + currentPlayer.getTurnScore());
             System.out.println("Press enter to roll again, or type s and press enter to save your score");
@@ -129,6 +129,8 @@ public class GameController {
     }
 
     public void endGame() {
+        currentPlayer.setPlayerScore(getWinCondition());
+        printLeaderboard();
         System.out.println(currentPlayer.getPlayerName() + " won the game!");
         System.exit(0);
     }
