@@ -14,7 +14,7 @@ public class ComputerOpponent extends Player {
 
     public void randomizeTargetScore() {
         Random random = new Random();
-        setTargetScore(15 + random.nextInt(25));
+        setTargetScore(10 + random.nextInt(20));
     }
 
     public void chooseAction() {
@@ -24,7 +24,6 @@ public class ComputerOpponent extends Player {
             e.printStackTrace();
         }
         if (getTurnScore() < targetScore) {
-            randomizeTargetScore();
             chooseRoll();
         }
         else chooseSave();

@@ -129,6 +129,8 @@ public class GameController {
     }
 
     public void endGame() {
+        currentPlayer.setPlayerScore(getWinCondition());
+        printLeaderboard();
         System.out.println(currentPlayer.getPlayerName() + " won the game!");
         System.exit(0);
     }
