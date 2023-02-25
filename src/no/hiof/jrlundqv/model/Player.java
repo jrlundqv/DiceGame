@@ -36,4 +36,8 @@ public class Player implements Comparable<Player>{
     public void setTurnScore(int turnScore) {
         this.turnScore = turnScore;
     }
+
+    public void setPlayerScore(int playerScore) {
+        this.playerScore = playerScore;
+    }
 }
