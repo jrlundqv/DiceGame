@@ -4,17 +4,18 @@ import no.hiof.jrlundqv.controller.GameController;
 import java.util.Random;
 
 public class ComputerOpponent extends Player {
-    private static int targetScore;
+    private int targetScore;
     private final GameController gameController;
 
-    public ComputerOpponent(String player_name, GameController gameController) {
-        super(player_name);
+    public ComputerOpponent(String playerName, GameController gameController) {
+        super(playerName);
         this.gameController = gameController;
+        randomizeTargetScore();
     }
 
     public void randomizeTargetScore() {
         Random random = new Random();
-        setTargetScore(15 + random.nextInt(25));
+        targetScore = 10 + random.nextInt(20);
     }
 
     public void chooseAction() {
@@ -24,7 +25,6 @@ public class ComputerOpponent extends Player {
             e.printStackTrace();
         }
         if (getTurnScore() < targetScore) {
-            randomizeTargetScore();
             chooseRoll();
         }
         else chooseSave();
@@ -39,10 +39,7 @@ public class ComputerOpponent extends Player {
     private void chooseSave() {
         System.out.println();
         gameController.saveScore();
-    }
-
-    public static void setTargetScore(int targetScore) {
-        ComputerOpponent.targetScore = targetScore;
+        randomizeTargetScore();
     }
 }
 
