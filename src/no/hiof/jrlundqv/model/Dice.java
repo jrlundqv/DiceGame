@@ -8,7 +8,7 @@ public class Dice {
     private final ArrayList<Integer> diceValues = new ArrayList<>();
     private final String[][] dieFaces;
     private static final String DICE_DOT = "⬤";
-    private static final String EMPTY_DICE_DOT = "○";
+    private static final String EMPTY_DICE_DOT = "⚪";
     private int diceRoll;
 
     private static final int dieSize = 3;
@@ -45,18 +45,16 @@ public class Dice {
 
     private int generateDieFace(int dieCast) {
         emptyDieFace();
-        switch(dieCast) {
-            case 1 -> setDieFaceToOne();
-            case 2 -> setDieFaceToTwo();
-            case 3 -> setDieFaceToThree();
-            case 4 -> setDieFaceToFour();
-            case 5 -> setDieFaceToFive();
-            case 6 -> setDieFaceToSix();
-            case 7 -> setDieFaceToSeven();
-            case 8 -> setDieFaceToEight();
-            case 9 -> setDieFaceToNine();
-        }
-        return dieCast;
+        if (dieCast == 1) setDieFaceToOne();
+        else if (dieCast == 2) setDieFaceToTwo();
+        else if (dieCast == 3) setDieFaceToThree();
+        else if (dieCast == 4) setDieFaceToFour();
+        else if (dieCast == 5) setDieFaceToFive();
+        else if (dieCast == 6) setDieFaceToSix();
+        else if (dieCast == 7) setDieFaceToSeven();
+        else if (dieCast == 8) setDieFaceToEight();
+        else if (dieCast == 9) setDieFaceToNine();
+    return dieCast;
     }
 
     private void setDieFaceToOne() {
