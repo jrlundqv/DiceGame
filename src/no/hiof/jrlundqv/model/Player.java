@@ -4,8 +4,8 @@ public class Player implements Comparable<Player>{
     private final String playerName;
     private int playerScore, turnScore;
 
-    public Player(String player_name) {
-        playerName = player_name;
+    public Player(String playerName) {
+        this.playerName = playerName;
     }
 
     @Override
