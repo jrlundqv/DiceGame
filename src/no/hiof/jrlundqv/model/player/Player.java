@@ -1,4 +1,4 @@
-package no.hiof.jrlundqv.model;
+package no.hiof.jrlundqv.model.player;
 
 public class Player implements Comparable<Player>{
     private final String playerName;

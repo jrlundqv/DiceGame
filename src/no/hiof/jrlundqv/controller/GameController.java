@@ -1,16 +1,16 @@
 package no.hiof.jrlundqv.controller;
 
-import no.hiof.jrlundqv.model.ComputerOpponent;
-import no.hiof.jrlundqv.model.Dice;
-import no.hiof.jrlundqv.model.DiceManager;
-import no.hiof.jrlundqv.model.Player;
+import no.hiof.jrlundqv.model.player.ComputerOpponent;
+import no.hiof.jrlundqv.model.dice.Dice;
+import no.hiof.jrlundqv.model.dice.DiceManager;
+import no.hiof.jrlundqv.model.player.Player;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
 public class GameController {
-    private static final int WIN_CONDITION = 100;
+    private static final int WIN_CONDITION = 10;
     private final ArrayList<Player> playerList = new ArrayList<>();
     private final DiceManager diceManager;
     private Player currentPlayer;
@@ -131,7 +131,7 @@ public class GameController {
     public void endGame() {
         currentPlayer.setPlayerScore(getWinCondition());
         printLeaderboard();
-        System.out.println(currentPlayer.getPlayerName() + " won the game!");
+        System.out.println("\n" + currentPlayer.getPlayerName() + " won the game!");
         System.exit(0);
     }
 

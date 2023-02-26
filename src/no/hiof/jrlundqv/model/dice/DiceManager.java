@@ -1,4 +1,4 @@
-package no.hiof.jrlundqv.model;
+package no.hiof.jrlundqv.model.dice;
 
 import java.util.ArrayList;
 import java.util.Random;

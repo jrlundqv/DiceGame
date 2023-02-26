@@ -1,9 +1,9 @@
 package no.hiof.jrlundqv;
 
 import no.hiof.jrlundqv.controller.GameController;
-import no.hiof.jrlundqv.model.ComputerOpponent;
-import no.hiof.jrlundqv.model.DiceManager;
-import no.hiof.jrlundqv.model.Player;
+import no.hiof.jrlundqv.model.player.ComputerOpponent;
+import no.hiof.jrlundqv.model.dice.DiceManager;
+import no.hiof.jrlundqv.model.player.Player;
 
 import java.io.BufferedReader;
 import java.io.IOException;

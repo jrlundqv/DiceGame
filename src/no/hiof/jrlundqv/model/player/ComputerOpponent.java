@@ -1,6 +1,7 @@
-package no.hiof.jrlundqv.model;
+package no.hiof.jrlundqv.model.player;
 
 import no.hiof.jrlundqv.controller.GameController;
+
 import java.util.Random;
 
 public class ComputerOpponent extends Player {
