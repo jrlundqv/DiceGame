@@ -21,7 +21,7 @@ public class DiceManager {
 
         for (int i = 0; i <= numberOfRolls; i++) {
             for (Dice dice : diceList) {
-                dice.rollDice(dice);
+                dice.rollDice();
             }
             printDice();
 

@@ -22,8 +22,8 @@ public class Dice {
         diceValues.add(diceValue);
     }
 
-    public void rollDice(Dice dice) {
-        dice.setDiceRoll(generateDieFace(pickRandomDiceValue()));
+    public void rollDice() {
+        setDiceRoll(generateDieFace(pickRandomDiceValue()));
     }
 
     public void printLine(int line) {
