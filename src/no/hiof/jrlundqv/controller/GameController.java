@@ -106,22 +106,22 @@ public class GameController {
             System.out.println(currentPlayer.getPlayerName() + " didn't stand a chance against the dice");
         else
             System.out.println(currentPlayer.getPlayerName() + " rolled a " + diceRoll + ", lost their " + currentPlayer.getTurnScore() + " points, and their turn is over!");
-
-        currentPlayer.setTurnScore(0);
-        playerTurnOver();
-        printLeaderboard();
-        printPlayerTurn();
-        computerCheckAction();
+        roundOver();
     }
 
     public void saveScore() {
         currentPlayer.addTurnScore();
         System.out.println(currentPlayer.getPlayerName() + " saved their round score of " + currentPlayer.getTurnScore());
+        roundOver();
+    }
+
+    private void roundOver() {
         currentPlayer.setTurnScore(0);
         playerTurnOver();
         printLeaderboard();
         printPlayerTurn();
         computerCheckAction();
+        if (currentPlayer instanceof ComputerOpponent) ((ComputerOpponent) currentPlayer).randomizeTargetScore();
     }
 
     public void checkWinCondition() {
