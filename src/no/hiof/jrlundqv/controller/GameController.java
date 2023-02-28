@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GameController {
-    private static final int WIN_CONDITION = 10;
+    private static final int WIN_CONDITION = 100;
     private final ArrayList<Player> playerList = new ArrayList<>();
     private final DiceManager diceManager;
     private Player currentPlayer;
