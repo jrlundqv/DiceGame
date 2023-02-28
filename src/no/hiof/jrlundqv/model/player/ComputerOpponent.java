@@ -37,6 +37,5 @@ public class ComputerOpponent extends Player {
     private void chooseSave() {
         System.out.println();
         gameController.saveScore();
-        randomizeTargetScore();
     }
 }
