@@ -25,11 +25,8 @@ public class ComputerOpponent extends Player {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (getTurnScore() < targetScore) {
-            chooseRoll();
-        }
+        if (getTurnScore() < targetScore) chooseRoll();
         else chooseSave();
-
     }
 
     private void chooseRoll() {
@@ -43,7 +40,3 @@ public class ComputerOpponent extends Player {
         randomizeTargetScore();
     }
 }
-
- /*   private void calculateTargetScore() {
-        double target = 5.0/6.0 * (4 +  );
-}*/
