@@ -1,4 +1,6 @@
-TODO Benytte user input for å bestemme antall spiller/computer opponents
+TODO Fiks input - Tillat kun èn input når det er spilleren sin tur til å velge handling
+TODO Implementere lydeffekter
+TODO Refaktorer GameController.rollDice() ???
 
 **** COMPLETED ****
 Sortere leaderboarden etter poengsum
