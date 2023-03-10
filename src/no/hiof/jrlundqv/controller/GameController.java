@@ -20,7 +20,9 @@ public class GameController {
     }
 
     /**
-     * Randomly selects which player gets to go first
+     * Legacy method for randomly selecting starting player.
+     * If all Player instances are ComputerOpponents, this method throws a StackOverFlowError exception.
+     * The exception is caused by infinite recursion.
      */
     public void setStartingPlayer() {
         Random random = new Random();
@@ -30,8 +32,20 @@ public class GameController {
     }
 
     /**
-     * Sets currentPlayer to the next player in the list
-     * If currentPlayer is the last player in the list, it goes back to the first
+     * Randomly selects which player gets to first.
+     */
+    public void randomizeStartingPlayer() {
+        Collections.shuffle(playerList);
+        setCurrentPlayer(playerList.get(0));
+        for (Player player : playerList) {
+            if (!(player instanceof ComputerOpponent)) setCurrentPlayer(player);
+        }
+        System.out.println(currentPlayer.getPlayerName() + " you get to start!");
+    }
+
+    /**
+     * Sets currentPlayer to the next player in the list.
+     * If currentPlayer is the last player in the list, it goes back to the first.
      */
     private void playerTurnOver() {
         if (playerList.indexOf(currentPlayer) == playerList.size() - 1)
