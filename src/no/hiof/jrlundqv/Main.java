@@ -35,7 +35,7 @@ public class Main {
                 """, gameController.getWinCondition());
 
         gameController.printAvailableCommands();
-        gameController.setStartingPlayer();
+        gameController.randomizeStartingPlayer();
 
         BufferedReader systemIn = new BufferedReader(new InputStreamReader(System.in));
 
