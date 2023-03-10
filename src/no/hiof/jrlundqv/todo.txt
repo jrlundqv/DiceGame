@@ -8,3 +8,4 @@ Printe to terninger ved siden av hverandre
 Gjøre det mulig å rulle x antall terninger
 Gjøre det mulig å være x antall spillere
 Gjøre det mulig å spille mot computern
+Skrive om GameController.setStartingPlayer()
